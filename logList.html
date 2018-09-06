@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>后台管理系统</title>
+  <link rel="stylesheet" href="src/css/layui.css">
+</head>
+
+<body class="layui-layout-body">
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+      <div class="layui-logo">后台管理系统</div>
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item"><a href="">控制台</a></li>
+        <li class="layui-nav-item"><a href="">日志</a></li>
+        <li class="layui-nav-item"><a href="">用户</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">其它管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="">邮件管理</a></dd>
+            <dd><a href="">消息管理</a></dd>
+            <dd><a href="">授权管理</a></dd>
+          </dl>
+        </li>
+      </ul>
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a href="javascript:;">
+            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+            管理员
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a href="">基本资料</a></dd>
+            <dd><a href="">安全设置</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">退出</a></li>
+      </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test">
+          <li class="layui-nav-item layui-nav-itemed">
+            <a class="" href="javascript:;">图文管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">列表一</a></dd>
+              <dd><a href="javascript:;">列表二</a></dd>
+              <dd><a href="javascript:;">列表三</a></dd>
+              <dd><a href="">超链接</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">打款管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">自动打款</a></dd>
+              <dd><a href="javascript:;">手动打款</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item"><a href="">页面配置</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+          <legend>日志列表</legend>
+        </fieldset>
+
+        <table class="layui-table" lay-skin="line">
+          <colgroup>
+            <col width="280">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>日志详情</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2018-01-01 00:00:00</td>
+              <td>日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情</td>
+            </tr>
+            <tr>
+              <td>2018-01-01 00:00:00</td>
+              <td>日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情日志详情</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding:20px 0;text-align: right">
+          <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-10">
+            <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a>
+            <span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span>
+            <a href="javascript:;" data-page="2">2</a>
+            <a href="javascript:;" data-page="3">3</a>
+            <span class="layui-laypage-spr">…</span>
+            <a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a>
+            <a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a>
+            <span class="layui-laypage-skip">到第<input type="text" min="1" value="1" class="layui-input">页
+              <button type="button" class="layui-laypage-btn">确定</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      底部固定区域
+    </div>
+  </div>
+  <script src="src/layui.js"></script>
+  <script>
+    //JavaScript代码区域
+    layui.use('element', function () {
+      var element = layui.element;
+
+    });
+  </script>
+</body>
+
+</html>
